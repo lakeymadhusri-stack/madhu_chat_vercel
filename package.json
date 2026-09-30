@@ -1,0 +1,10 @@
+{
+  "name": "koyyuru-campus-portal",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Campus portal with a Gemini-powered chatbot, deployable on Vercel.",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "npx vercel dev"
+  }
+}

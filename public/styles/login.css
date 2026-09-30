@@ -1,0 +1,1116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --navy: #101a3a;
+    --violet: #6d4aff;
+    --violet-light: #8b72ff;
+    --white: #ffffff;
+    --text-soft: rgba(255, 255, 255, 0.68);
+    --border: rgba(255, 255, 255, 0.20);
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    background: #101a3a;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.login-page {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
+
+.background {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("../images/background.png"),
+        url("../images/background.jpeg");
+
+    background-size: cover;
+    background-position: center center;
+
+    transform: scale(1.015);
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   GRADIENT OVERLAY
+========================================================= */
+
+.gradient-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 26, 58, 0.94) 0%,
+            rgba(31, 32, 91, 0.82) 15%,
+            rgba(70, 50, 145, 0.56) 31%,
+            rgba(109, 74, 255, 0.25) 46%,
+            rgba(109, 74, 255, 0.05) 63%,
+            rgba(0, 0, 0, 0) 80%
+        );
+}
+
+
+/* Additional cinematic gradient */
+
+.gradient-overlay::before {
+    content: "";
+
+    position: absolute;
+
+    left: -10%;
+    bottom: -25%;
+
+    width: 65%;
+    height: 75%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(109, 74, 255, 0.50) 0%,
+            rgba(109, 74, 255, 0.22) 35%,
+            rgba(109, 74, 255, 0) 72%
+        );
+
+    filter: blur(30px);
+}
+
+
+/* =========================================================
+   LIGHT ORBS
+========================================================= */
+
+.light-orb {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    filter: blur(70px);
+}
+
+
+.orb-one {
+    width: 300px;
+    height: 300px;
+
+    left: -150px;
+    bottom: -120px;
+
+    background: rgba(109, 74, 255, 0.35);
+}
+
+
+.orb-two {
+    width: 220px;
+    height: 220px;
+
+    left: 18%;
+    top: -130px;
+
+    background: rgba(69, 91, 255, 0.14);
+}
+
+
+/* =========================================================
+   LOGIN WRAPPER
+========================================================= */
+
+.login-wrapper {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    padding-left: clamp(
+        40px,
+        7vw,
+        120px
+    );
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   GLASS LOGIN CARD
+========================================================= */
+
+.login-card {
+    width: min(
+        100%,
+        505px
+    );
+
+    padding:
+        clamp(30px, 4vw, 48px);
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 26, 58, 0.76),
+            rgba(20, 27, 67, 0.56)
+        );
+
+    border:
+        1px solid rgba(
+            255,
+            255,
+            255,
+            0.23
+        );
+
+    backdrop-filter:
+        blur(22px)
+        saturate(125%);
+
+    -webkit-backdrop-filter:
+        blur(22px)
+        saturate(125%);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    animation:
+        cardAppear 0.8s ease forwards;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 42px;
+}
+
+
+.brand-logo {
+    position: relative;
+
+    width: 46px;
+    height: 46px;
+}
+
+
+.brand-logo span {
+    position: absolute;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6244ff,
+            #7e6bff
+        );
+
+    transform: rotate(45deg);
+}
+
+
+.brand-logo span:nth-child(1) {
+    left: 0;
+    top: 0;
+}
+
+
+.brand-logo span:nth-child(2) {
+    left: 15px;
+    top: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7e6bff,
+            #45a7ff
+        );
+}
+
+
+.brand-logo span:nth-child(3) {
+    left: 15px;
+    top: -1px;
+
+    opacity: 0.75;
+}
+
+
+.brand-text h3 {
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 650;
+
+    letter-spacing: 0.3px;
+}
+
+
+.brand-text p {
+    margin-top: 4px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.heading {
+    margin-bottom: 30px;
+}
+
+
+.heading h1 {
+    color: white;
+
+    font-size:
+        clamp(
+            30px,
+            3vw,
+            39px
+        );
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+.heading p {
+    margin-top: 9px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.60
+        );
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.input-group {
+    position: relative;
+
+    width: 100%;
+
+    height: 57px;
+
+    margin-bottom: 18px;
+}
+
+
+.input-group input {
+    width: 100%;
+    height: 100%;
+
+    padding:
+        0 50px 0 58px;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.16
+        );
+
+    border-radius: 14px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.045
+        );
+
+    transition:
+        0.25s ease;
+}
+
+
+.input-group input::placeholder {
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.60
+        );
+}
+
+
+.input-group input:hover {
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.25
+        );
+}
+
+
+.input-group input:focus {
+    border-color:
+        rgba(
+            122,
+            99,
+            255,
+            0.9
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            109,
+            74,
+            255,
+            0.13
+        );
+}
+
+
+.input-icon {
+    position: absolute;
+
+    left: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.85
+        );
+
+    font-size: 17px;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+========================================================= */
+
+.password-toggle {
+    position: absolute;
+
+    right: 17px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background: none;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.password-toggle:hover {
+    color: white;
+}
+
+
+/* =========================================================
+   FORM OPTIONS
+========================================================= */
+
+.form-options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin:
+        5px 0 27px;
+}
+
+
+.remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.75
+        );
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+.remember input {
+    display: none;
+}
+
+
+.custom-checkbox {
+    width: 23px;
+    height: 23px;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.28
+        );
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.05
+        );
+
+    transition: 0.2s;
+}
+
+
+.custom-checkbox i {
+    opacity: 0;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+
+.remember input:checked + .custom-checkbox {
+    background:
+        linear-gradient(
+            135deg,
+            #6244ff,
+            #7d65ff
+        );
+
+    border-color: transparent;
+
+    box-shadow:
+        0 5px 18px
+        rgba(
+            109,
+            74,
+            255,
+            0.35
+        );
+}
+
+
+.remember input:checked + .custom-checkbox i {
+    opacity: 1;
+}
+
+
+.form-options a {
+    color:
+        #8875ff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+
+.form-options a:hover {
+    color: white;
+}
+
+
+/* =========================================================
+   SIGN IN BUTTON
+========================================================= */
+
+.sign-in-button {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    height: 59px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #6950ff,
+            #7654ff,
+            #6240e9
+        );
+
+    box-shadow:
+        0 14px 30px
+        rgba(
+            76,
+            52,
+            200,
+            0.35
+        );
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.sign-in-button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(
+                255,
+                255,
+                255,
+                0.20
+            ),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: 0.6s;
+}
+
+
+.sign-in-button:hover::before {
+    left: 130%;
+}
+
+
+.sign-in-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 18px 38px
+        rgba(
+            76,
+            52,
+            200,
+            0.46
+        );
+}
+
+
+.sign-in-button:active {
+    transform: translateY(0);
+}
+
+
+.sign-in-button i {
+    transition: 0.25s;
+}
+
+
+.sign-in-button:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   REGISTER
+========================================================= */
+
+.register {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 31px;
+
+    font-size: 13px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+}
+
+
+.register a {
+    color:
+        #8977ff;
+
+    text-decoration: none;
+
+    font-weight: 550;
+
+    transition: 0.2s;
+}
+
+
+.register a:hover {
+    color: white;
+}
+
+
+/* =========================================================
+   LOADING STATE
+========================================================= */
+
+.sign-in-button.loading {
+    pointer-events: none;
+
+    opacity: 0.8;
+}
+
+
+.sign-in-button.loading span {
+    font-size: 0;
+}
+
+
+.sign-in-button.loading span::after {
+    content: "Signing in...";
+
+    font-size: 15px;
+}
+
+
+.sign-in-button.loading i {
+    display: none;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast {
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        13px 18px;
+
+    border-radius: 12px;
+
+    color: white;
+
+    background:
+        rgba(
+            20,
+            27,
+            60,
+            0.88
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.18
+        );
+
+    backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    transform:
+        translateY(100px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.35s ease;
+
+    font-size: 13px;
+}
+
+
+.toast.show {
+    transform:
+        translateY(0);
+
+    opacity: 1;
+}
+
+
+.toast i {
+    color: #7e6bff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .login-wrapper {
+        padding-left: 5vw;
+    }
+
+    .login-card {
+        width: 440px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+
+    .login-page {
+        min-height: 100vh;
+
+        align-items: center;
+
+        padding: 25px;
+    }
+
+
+    .background {
+        background-position:
+            67% center;
+    }
+
+
+    .gradient-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(16, 26, 58, 0.90),
+                rgba(16, 26, 58, 0.72)
+            );
+    }
+
+
+    .login-wrapper {
+        padding: 0;
+
+        justify-content: center;
+    }
+
+
+    .login-card {
+        width: 100%;
+
+        max-width: 430px;
+
+        padding: 30px 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .brand {
+        margin-bottom: 30px;
+    }
+
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+
+    .heading p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .login-page {
+        padding: 15px;
+    }
+
+
+    .login-card {
+        padding: 27px 21px;
+    }
+
+
+    .brand {
+        margin-bottom: 25px;
+    }
+
+
+    .brand-logo {
+        transform: scale(0.9);
+        transform-origin: left center;
+    }
+
+
+    .brand-text h3 {
+        font-size: 14px;
+    }
+
+
+    .heading {
+        margin-bottom: 24px;
+    }
+
+
+    .heading h1 {
+        font-size: 28px;
+    }
+
+
+    .form-options {
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .register {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

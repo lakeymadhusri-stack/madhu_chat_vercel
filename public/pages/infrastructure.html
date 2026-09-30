@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure | Campus</title>
+    <link rel="stylesheet" href="../styles/site.css">
+    <script src="../scripts/auth.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="../index.html"><span>Campus</span></a>
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item" data-theme="home"><span class="icon">⌂</span><span>Home</span></a>
+            <a href="schedule.html" class="nav-item" data-theme="schedule"><span class="icon">◷</span><span>Schedule</span></a>
+            <a href="infrastructure.html" class="nav-item" data-theme="infra"><span class="icon">▦</span><span>Infrastructure</span></a>
+            <a href="food.html" class="nav-item" data-theme="food"><span class="icon">🍴</span><span>Food</span></a>
+            <a href="about.html" class="nav-item" data-theme="team"><span class="icon">ⓘ</span><span>Team</span></a>
+        </div>
+        <div class="nav-glow"></div>
+    </nav>
+    <main class="page-content wide-page">
+        <p class="small-title">AROOHAN CAMPUS</p>
+        <h1>Infrastructure <span>Dashboard</span></h1>
+        <p class="description">A snapshot of two blocks — Dining Block and Main Block — with sample photos until campus images are added.</p>
+
+        <div class="stats-grid">
+            <div class="stat-card reveal">
+                <h2>68</h2>
+                <p>Total Systems</p>
+            </div>
+            <div class="stat-card reveal">
+                <h2>2</h2>
+                <p>Labs</p>
+            </div>
+            <div class="stat-card reveal">
+                <h2>3</h2>
+                <p>Floors</p>
+            </div>
+            <div class="stat-card reveal">
+                <h2>5</h2>
+                <p>Hostel Rooms</p>
+            </div>
+        </div>
+
+        <div class="block-grid">
+            <section class="page-card block-card reveal">
+                <div class="photo-slot">
+                    <img
+                        src="/images/schedule.jpeg"
+                        data-fallback="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+                        alt="Dining block sample photo"
+                    >
+                    <span class="photo-hint">Replace images/infra/dining-block.jpg</span>
+                </div>
+                <h2>Dining Block</h2>
+                <p>Food service wing with seating, kitchen access, and daily menu operations.</p>
+            </section>
+            <section class="page-card block-card reveal">
+                <div class="photo-slot">
+                    <img
+                        src="/images/background2.jpeg"
+                        data-fallback="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+                        alt="Main block sample photo"
+                    >
+                    <span class="photo-hint">Replace images/infra/main-block.jpg</span>
+                </div>
+                <h2>Main Block</h2>
+                <p>Academic and residential core covering labs, classrooms, offices, and hostels.</p>
+            </section>
+        </div>
+
+        <div class="section-label">LAB DETAILS</div>
+        <div class="facility-list">
+            <div class="facility-row"><span>Lab-1 Systems</span><b>20</b></div>
+            <div class="facility-row"><span>Lab-2 Systems</span><b>48</b></div>
+            <div class="facility-row"><span>Total Systems</span><b>68</b></div>
+            <div class="facility-row"><span>Lab Rooms</span><b>2</b></div>
+        </div>
+
+        <div class="section-label">ROOM DETAILS</div>
+        <div class="facility-list">
+            <div class="facility-row"><span>Class Rooms</span><b>2</b></div>
+            <div class="facility-row"><span>Office Rooms</span><b>2</b></div>
+            <div class="facility-row"><span>Trainers Rooms</span><b>1</b></div>
+            <div class="facility-row"><span>Girls Hostel Rooms</span><b>2</b></div>
+            <div class="facility-row"><span>Boys Hostel Rooms</span><b>3</b></div>
+        </div>
+
+        <div class="section-label">FACILITIES</div>
+        <div class="facility-list">
+            <div class="facility-row"><span>Girls Washrooms</span><b>10</b></div>
+            <div class="facility-row"><span>Boys Washrooms</span><b>9</b></div>
+            <div class="facility-row"><span>Drinking Water Plant</span><b>1</b></div>
+        </div>
+    </main>
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/theme.js"></script>
+</body>
+</html>

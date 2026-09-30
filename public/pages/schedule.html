@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule | Campus</title>
+    <link rel="stylesheet" href="../styles/site.css">
+    <script src="../scripts/auth.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="../index.html"><span>Campus</span></a>
+        <div class="nav-links">
+            <a href="../index.html" class="nav-item" data-theme="home"><span class="icon">⌂</span><span>Home</span></a>
+            <a href="schedule.html" class="nav-item" data-theme="schedule"><span class="icon">◷</span><span>Schedule</span></a>
+            <a href="infrastructure.html" class="nav-item" data-theme="infra"><span class="icon">▦</span><span>Infrastructure</span></a>
+            <a href="food.html" class="nav-item" data-theme="food"><span class="icon">🍴</span><span>Food</span></a>
+            <a href="about.html" class="nav-item" data-theme="team"><span class="icon">ⓘ</span><span>Team</span></a>
+        </div>
+        <div class="nav-glow"></div>
+    </nav>
+    <main class="page-content schedule-page">
+        <p class="small-title">PLAN YOUR DAY</p>
+        <h1>Full Stack <span>Python</span></h1>
+        <p class="description">First 3 months course plan — Learn → Practice → Assess → Build Projects.</p>
+
+        <div class="badges">
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Python</span>
+            <span class="badge">Django / Flask</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">API</span>
+            <span class="badge">Git &amp; GitHub</span>
+        </div>
+
+        <section class="page-card">
+            <h2>First 3 Months — Core Full Stack</h2>
+            <div class="topic-grid">
+                <div class="topic">
+                    <h3>1. HTML</h3>
+                    <p>Web page structure, forms, tables and semantic elements.</p>
+                </div>
+                <div class="topic">
+                    <h3>2. CSS</h3>
+                    <p>Layouts, colors, responsive design and styling.</p>
+                </div>
+                <div class="topic">
+                    <h3>3. JavaScript</h3>
+                    <p>Variables, functions, conditions, loops and DOM basics.</p>
+                </div>
+                <div class="topic">
+                    <h3>4. Python</h3>
+                    <p>Python syntax, functions, collections and problem solving.</p>
+                </div>
+                <div class="topic">
+                    <h3>5. Django / Flask</h3>
+                    <p>Backend development and web application basics.</p>
+                </div>
+                <div class="topic">
+                    <h3>6. MySQL</h3>
+                    <p>Database, tables, queries and application data.</p>
+                </div>
+                <div class="topic">
+                    <h3>7. API</h3>
+                    <p>Request, response and connecting application data.</p>
+                </div>
+                <div class="topic">
+                    <h3>8. Git &amp; GitHub</h3>
+                    <p>Version control, repositories and project sharing.</p>
+                </div>
+                <div class="topic">
+                    <h3>9. Projects</h3>
+                    <p>Practice projects and a final project workflow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-card">
+            <h2>Next 3 Months — AI &amp; ML Course Concepts</h2>
+            <div class="topic-grid">
+                <div class="topic">
+                    <h3>1. Python Basics</h3>
+                    <p>Programming foundation for AI/ML.</p>
+                </div>
+                <div class="topic">
+                    <h3>2. Maths Basics</h3>
+                    <p>Useful mathematical concepts for models.</p>
+                </div>
+                <div class="topic">
+                    <h3>3. Data Handling</h3>
+                    <p>Collecting, cleaning and preparing data.</p>
+                </div>
+                <div class="topic">
+                    <h3>4. Machine Learning</h3>
+                    <p>Learning patterns from data.</p>
+                </div>
+                <div class="topic">
+                    <h3>5. ML Algorithms</h3>
+                    <p>Classification, regression and other algorithms.</p>
+                </div>
+                <div class="topic">
+                    <h3>6. Model Concepts</h3>
+                    <p>Training, testing and evaluating models.</p>
+                </div>
+                <div class="topic">
+                    <h3>7. AI Concepts</h3>
+                    <p>Core ideas and practical AI applications.</p>
+                </div>
+                <div class="topic">
+                    <h3>8. Python Libraries</h3>
+                    <p>Libraries used for data and machine learning.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-card">
+            <h2>Daily Training Schedule</h2>
+            <label class="sr-only" for="search">Search schedule</label>
+            <input id="search" class="search" type="search" placeholder="Search session, topic or description...">
+            <div class="table-wrap">
+                <table id="schedule">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Session</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">9:15 AM – 11:00 AM</td>
+                            <td>Session 1</td>
+                            <td>Theory / concept learning, communication &amp; collaboration</td>
+                        </tr>
+                        <tr>
+                            <td class="time break">11:00 AM – 11:15 AM</td>
+                            <td>Short Break</td>
+                            <td>Refreshment / break</td>
+                        </tr>
+                        <tr>
+                            <td class="time">11:15 AM – 1:00 PM</td>
+                            <td>Session 2</td>
+                            <td>Hands-on labs, coding and practical exercises</td>
+                        </tr>
+                        <tr>
+                            <td class="time">2:00 PM – 4:00 PM</td>
+                            <td>Session 3 (Lab)</td>
+                            <td>Refreshment, practice, assessment and doubt clarification</td>
+                        </tr>
+                        <tr>
+                            <td class="time">4:15 PM – 5:00 PM</td>
+                            <td>Session 4</td>
+                            <td>Communication skills / technical skills / AI-assisted learning</td>
+                        </tr>
+                        <tr>
+                            <td class="time">5:00 PM – 6:00 PM</td>
+                            <td>Communication Tech Class</td>
+                            <td>Communication practice and technical learning</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Daily</td>
+                            <td>Daily Quiz</td>
+                            <td>Short assessment based on the day's topics</td>
+                        </tr>
+                        <tr>
+                            <td class="time">Weekly</td>
+                            <td>Weekly Quiz</td>
+                            <td>Weekly assessment and performance evaluation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="page-card">
+            <h2>Weekly &amp; Project Activities</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <strong>Weekly Scheduled</strong>
+                    <p>Project review, guidance and feedback.</p>
+                </div>
+                <div class="project-item">
+                    <strong>Project Presentation</strong>
+                    <p>Student project demonstration and presentation.</p>
+                </div>
+                <div class="project-item">
+                    <strong>Ongoing Project</strong>
+                    <p>Practical project implementation and completion.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../scripts/navigation.js"></script>
+    <script src="../scripts/theme.js"></script>
+    <script src="../scripts/schedule.js"></script>
+</body>
+</html>

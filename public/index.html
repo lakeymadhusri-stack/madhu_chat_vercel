@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Portal</title>
+
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="scripts/auth.js"></script>
+</head>
+
+<body>
+    <!-- CHATBOT -->
+
+<div class="chatbot">
+
+    <button
+        class="chatbot-toggle"
+        id="chatbotToggle">
+        💬
+    </button>
+
+
+    <div
+        class="chat-window"
+        id="chatWindow">
+
+        <div class="chat-header">
+
+            <div>
+                <div class="bot-name">
+                    AI Assistant
+                </div>
+
+                <div class="bot-status">
+                    <span></span>
+                    Online
+                </div>
+            </div>
+
+            <button
+                class="chat-close"
+                id="chatClose">
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="chat-messages"
+            id="chatMessages">
+
+            <div class="message bot-message">
+
+                <div class="message-bubble">
+                    Hi! 👋 How can I help you?
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chat-input-area">
+
+            <input
+                id="chatInput"
+                type="text"
+                placeholder="Type a message..."
+            />
+
+            <button id="sendButton">
+                ➤
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- YOUR CHATBOT JAVASCRIPT -->
+<script src="scripts/chatbot.js"></script>
+
+    <!-- Background -->
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <a class="logo" href="index.html">
+            <span>Campus</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html" class="nav-item active" data-theme="home" aria-current="page">
+                <span class="icon">⌂</span>
+                <span>Home</span>
+            </a>
+
+            <a href="pages/schedule.html" class="nav-item" data-theme="schedule">
+                <span class="icon">◷</span>
+                <span>Schedule</span>
+            </a>
+
+            <a href="pages/infrastructure.html" class="nav-item" data-theme="infra">
+                <span class="icon">▦</span>
+                <span>Infrastructure</span>
+            </a>
+
+            <a href="pages/food.html" class="nav-item" data-theme="food">
+                <span class="icon">🍴</span>
+                <span>Food</span>
+            </a>
+
+            <a href="pages/about.html" class="nav-item" data-theme="team">
+                <span class="icon">ⓘ</span>
+                <span>Team</span>
+            </a>
+
+        </div>
+
+        <!-- Moving glass highlight -->
+        <div class="nav-glow"></div>
+
+    </nav>
+
+
+    <!-- Main content -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    WELCOME TO OUR CAMPUS
+                </p>
+
+                <h1>
+                    Everything you need,
+                    <br>
+                    <span>in one place.</span>
+                </h1>
+
+                <p class="description">
+                    Explore schedules, infrastructure, dining menus,
+                    and the team behind campus life.
+                </p>
+
+                <a class="explore-btn" href="pages/schedule.html">
+                    Explore Campus
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/theme.js"></script>
+
+</body>
+</html>
